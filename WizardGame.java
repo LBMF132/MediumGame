@@ -7,7 +7,9 @@ import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.tiled.TiledMap;
 
 
 public class WizardGame extends BasicGame {
@@ -30,7 +32,11 @@ public class WizardGame extends BasicGame {
     public void init(GameContainer container) throws SlickException
     {
     	
-    	
+		Image [] movementUp = {new Image("data/wmg1_bk1.png"), new Image("data/wmg1_bk2.png")};
+		Image [] movementDown = {new Image("data/wmg1_fr1.png"), new Image("data/wmg1_fr2.png")};
+		Image [] movementLeft = {new Image("data/wmg1_lf1.png"), new Image("data/wmg1_lf2.png")};
+		Image [] movementRight = {new Image("data/wmg1_rt1.png"), new Image("data/wmg1_rt2.png")};
+		int [] duration = {300, 300};
     	grassMap = new TiledMap(dataPath+"test2.tmx");
     }
 
